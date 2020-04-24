@@ -1,0 +1,276 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  align-items: center;
+  background-color: #5ab3f8;
+  color: #303030;
+  display: flex;
+  font-family: 'Manrope', sans-serif;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding-bottom: 10%;
+}
+
+.container {
+  background-color: white;
+  border: 2px solid	#e0e0e0;
+  border-radius: 5px;
+  display: flex;
+  padding: 2%;
+  word-wrap: break-word;
+  width: 45%;
+}
+
+/**************************** Left Container ****************************/
+
+.left-container {
+  border-right: 2px solid #e0e0e0;
+  padding-right: 5%;
+  width: 40%;
+}
+
+.description {
+  margin: 0;
+  padding-bottom: 15%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button Icon Styling */
+
+.clicked, .unclicked {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 2.7rem;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 40%;
+}
+
+.clicked {
+  background-color: #0069ed;
+  color: #ffffff;
+}
+
+.unclicked {
+  color: #0069ed;
+  background-color: #ffffff;
+  border: 2px solid #0069ed;
+}
+
+.unclicked:hover,
+.unclicked:hover {
+  background-color: #0069ed;
+  color: #ffffff;
+}
+
+/**************************** Right Container ****************************/
+
+.right-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2% 0 0 5%;
+  width: 60%;
+}
+
+.purchase-total-container, .tip-percent-container, .group-size-container {
+  align-items: center;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.group-size-container {
+  display: none;
+}
+
+input {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  outline: none;
+  padding-left: 3%;
+  width: 60%;
+  -webkit-appearance: none;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Calculate */
+
+.calculate {
+  background-color: #20b64f;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2.5%;
+  width: 100%;
+}
+
+.calculate:hover,
+.calculate:focus {
+    cursor: pointer;
+    background: #19903e;
+}
+
+.calculate p {
+  display: inline;
+}
+
+/* Tip Amount */
+
+.tip-amount {
+  background-color: #0069ed;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6%;
+  text-align: center;
+  width: 100%;
+}
+
+.tip-amount p {
+  display: inline;
+  padding: 0;
+}
+
+/**************************** Media Query ****************************/
+
+@media (max-width: 1500px) {
+
+  .container {
+    padding: 2.5%;
+    width: 55%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 1180px) {
+
+  .container {
+    flex-direction: column;
+    padding: 3%;
+    width: 55%;
+  }
+
+  .left-container {
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0%;
+    padding-bottom: 5%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .description {
+    padding-bottom: 10%;
+  }
+
+  .right-container {
+    padding: 0%;
+    padding-top: 5%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding-bottom: 6%;
+  }
+
+  p, label {
+    font-size: 1rem;
+  }
+
+  .purchase-total-container, .tip-percent-container, .group-size-container {
+    margin-bottom: 6%;
+  }
+
+  .calculate {
+    margin-bottom: 3%;
+  }
+
+  .tip-amount {
+    margin-top: 3%;
+  }
+
+  .clicked, .unclicked {
+    height: 2.5rem;
+  }
+
+}
+
+@media (max-width: 730px) {
+
+  h1 {
+    font-size: 1.5rem;
+    padding-bottom: 6%;
+  }
+
+  p, label {
+    font-size: 0.8rem;
+  }
+
+  .left-container {
+    padding-bottom: 10%;
+  }
+
+  .right-container {
+    padding-top: 10%;
+  }
+
+  .description {
+    padding-bottom: 15%;
+  }
+
+  .clicked, .unclicked {
+    height: 2.1rem;
+  }
+
+  .tip-amount-title {
+    text-align: left;
+  }
+
+}

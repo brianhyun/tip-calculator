@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tip Calculator</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Manrope:300,400,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/200654fd19.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-container">
+        <h1>Tip Calculator</h1>
+        <p class="description">Calculate the tip on your purchase! Splitting your bill? Click on the group button to enter the number of friends to split your bill with!</p>
+        <div class="icon-container">
+          <button class="solo clicked" type="button" name="button"><i class="fas fa-user"></i></button>
+          <button class="group unclicked" type="button" name="button"><i class="fas fa-user-friends"></i></button>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="purchase-total-container">
+          <label for="purchase-total">Total ($)</label>
+          <input id="purchase-total" type="number" name="purchase-total" min="0.01" max="10000" step="0.01" placeholder="Value between 0.00 - 10000.00">
+        </div>
+
+        <div class="tip-percent-container">
+          <label for="tip-percent">Tip (%)</label>
+          <input id="tip-percent" type="number" name="tip-percentage" min="1" max="100" step="1" placeholder="Value between 0 - 100">
+        </div>
+
+        <div class="group-size-container">
+          <label for="group-size">Group Size</label>
+          <input id="group-size" type="number" name="group-size" min="1" max="100" step="1" placeholder="Value between 1 - 100">
+        </div>
+
+        <div class="calculate">
+          <p>Calculate!</p>
+        </div>
+
+        <hr>
+
+        <div class="tip-amount">
+          <p class="tip-amount-title"><strong>Tip Amount</strong></p>
+          <p class="tip-text"><strong>$0.00</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
